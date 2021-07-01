@@ -119,3 +119,25 @@ ggplot(data = spp_dissimilarity, (aes(x = 1:58, y = sor_df.1.1..1.58.))) +
 #it is represented by the increase in dissimilarity of species across the the sites/ coastal sections 
 #as more species , not present in prior sites will be recorded and an increase in dissimilarity over the sites develops. 
 #increasing dissimilarity seen by graphically displayed increasing line. 
+
+#GAMMA DIVERSITY 
+
+# the number of columns gives the total number of species in this example:
+ncol(spp)
+
+#an alternative method for gamma diversity 
+diversityresult(spp, index = 'richness', method = 'pooled')
+
+#the two methods for measuring gamma diversity provides a result with 
+#a difference of 1 
+
+#QUESTIONS 
+
+#1.
+#The ncol() function calculates the sum of all the columns 
+#this may be the column including sites too 
+#while the diversityresult() function acts more biologically correct by calculating 
+#the sum of columns only designated to species related data 
+
+#2.
+#gamma diversity measured with diversityfunction() is correct therefore total of 846
